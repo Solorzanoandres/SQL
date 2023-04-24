@@ -1,0 +1,28 @@
+--Create Andres Clothing Store database 
+
+CREATE TABLE Andres (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, quantity INTEGER);
+INSERT INTO Andres VALUES (1, "Shirts", 5.99, 15);
+INSERT INTO Andres VALUES (2, "Pants", 25.99, 22);
+INSERT INTO Andres VALUES (3, "Hats", 10.99, 25);
+INSERT INTO Andres VALUES (4, "Flannels", 12.99, 27);
+INSERT INTO Andres VALUES (5, "Socks", 2.99, 17);
+INSERT INTO Andres VALUES (6, "Dress Shirts", 25.99, 19);
+INSERT INTO Andres VALUES (7, "Slacks", 32.99, 40);
+INSERT INTO Andres VALUES (8, "Boxer Briefs", 5.99, 32);
+INSERT INTO Andres VALUES (9, "Purse", 85.99, 15);
+INSERT INTO Andres VALUES (10, "Perfume", 58.99, 18);
+INSERT INTO Andres VALUES (11, "Muscle Shirt", 3.99, 15);
+INSERT INTO Andres VALUES (12, "Under Shirt", 5.99, 13);
+INSERT INTO Andres VALUES (13, "Beanies", 10.99, 9);
+INSERT INTO Andres VALUES (14, "Jackets", 62.99, 30);
+INSERT INTO Andres VALUES (15, "Sweatshorts",15.99, 22);
+
+_display the stock in database
+SELECT * FROM Andres;
+
+-display the stock in database that had more than 20 quantities 
+SELECT * FROM Andres WHERE quantity >20;
+
+
+
+
