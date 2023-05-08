@@ -1,0 +1,36 @@
+CREATE TABLE NBA_Players (id INTEGER PRIMARY KEY AUTOINCREMENT,
+ player_name TEXT, 
+ player_number INTEGER,
+ teams TEXT);
+
+
+  
+INSERT INTO NBA_Players (player_name, player_number, teams) VALUES ("Lebron James", 23/6, "Cavalier/Heat/Lakers");
+INSERT INTO NBA_Players (player_name, player_number, teams ) VALUES ("Kareem Abdul-Jabbar" , 33, "Bucks/Lakers");
+INSERT INTO NBA_Players (player_name, player_number, teams) VALUES ("Karl Malone", 32, "Utah Jazz/Lakers");
+INSERT INTO NBA_Players (player_name, player_number, teams) VALUES ("Kobe Bryant", 8/24, "Lakers");
+INSERT INTO NBA_Players (player_name, player_number, teams) VALUES("Michael Jordan", 23, "Bulls/Wizards");
+
+CREATE TABLE Total_Points (id INTEGER PRIMARY KEY AUTOINCREMENT,
+player_id INTEGER,
+points INTEGER);
+
+INSERT INTO Total_Points (player_id, points) VALUES (1, 38652);
+INSERT INTO Total_Points (player_id, points) VALUES (2, 38387);
+INSERT INTO Total_Points (player_id, points) VALUES (3, 36928);
+INSERT INTO Total_Points (player_id, points) VALUES (4, 33643);
+INSERT INTO Total_Points (player_id, points) VALUES (5, 32292);
+
+
+
+SELECT NBA_Players.player_name,Total_Points.points
+FROM NBA_Players
+JOIN Total_Points 
+ON NBA_Players.id=Total_Points.id;
+
+
+
+SELECT NBA_Players.player_name,NBA_Players.player_number,NBA_Players.teams,Total_Points.points
+FROM NBA_Players
+JOIN Total_Points 
+ON NBA_Players.id=Total_Points.id;
